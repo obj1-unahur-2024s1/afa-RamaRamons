@@ -1,0 +1,25 @@
+import afa.*
+import estadios.*
+import Jugadores.*
+test "ganancia neta partido messi en la bombonera" {
+
+	assert.equals(1000000+5+20, afa.costoDeEvento())
+
+}
+test "ganancia neta partido messi en el monumental" {
+    afa.estadioActual(monumental)
+	assert.equals(1000000+5+50, afa.costoDeEvento())
+
+}
+test "capacidad del monumental sin avances"{
+	assert.equals(550000, monumental.capacidad())
+}
+test "capacidad del monumental con 1 avances"{
+    monumental.nuevosAvances()
+	assert.equals(600000, monumental.capacidad())
+}
+test "popularidad de mbappe con 2 anios mas"{
+	mbappe.pasaronCosas()
+	mbappe.pasaronCosas()
+	assert.equals(396, mbappe.popularidad())
+}
